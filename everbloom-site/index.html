@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EverBloom Therapy Center | Flourishing Together</title>
+<link rel="icon" type="image/png" href="assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#26495c;
+  --navy-deep:#1c3644;
+  --blue:#3fa0d8;
+  --blue-light:#eaf6fc;
+  --yellow:#f2e75a;
+  --yellow-soft:#fdf9d9;
+  --sage:#9dc98a;
+  --cream:#fffdf6;
+  --ink:#2c3e40;
+  --line:#e7e2d3;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--cream);}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--navy-deep);margin:0;}
+a{color:inherit;}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);}
+section[id]{scroll-margin-top:84px;}
+
+/* header */
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 44px;background:var(--cream);position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:14px;}
+header .brand img{height:52px;display:block;}
+nav{display:flex;align-items:center;flex-wrap:wrap;}
+nav a{margin-left:26px;color:var(--navy);text-decoration:none;font-weight:600;font-size:14.5px;padding-bottom:4px;border-bottom:2px solid transparent;transition:border-color .15s ease,color .15s ease;}
+nav a:hover{color:var(--blue);}
+.header-cta{display:flex;align-items:center;gap:16px;}
+.phone-pill{font-weight:700;color:var(--navy);font-size:14.5px;text-decoration:none;white-space:nowrap;}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;border:2px solid transparent;cursor:pointer;}
+.btn:hover{transform:translateY(-1px);}
+.btn-primary{background:var(--navy-deep);color:#fff;}
+.btn-primary:hover{box-shadow:0 8px 18px rgba(28,54,68,0.28);}
+.btn-outline{background:transparent;color:var(--navy-deep);border-color:var(--navy-deep);}
+.btn-outline:hover{background:var(--navy-deep);color:#fff;}
+.btn-sun{background:var(--yellow);color:var(--navy-deep);}
+.btn-sun:hover{box-shadow:0 8px 18px rgba(242,231,90,0.45);}
+
+/* home hero */
+.hero{
+  position:relative;
+  padding:76px 20px 88px;
+  text-align:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(63,160,216,0.24) 0, transparent 55%),
+    radial-gradient(circle at 88% 20%, rgba(242,231,90,0.30) 0, transparent 55%),
+    var(--blue-light);
+}
+.hero img.lockup{height:190px;margin-bottom:18px;}
+.hero h1{font-size:44px;max-width:760px;margin:0 auto 18px;line-height:1.15;font-weight:600;}
+.hero h1 em{font-style:italic;color:var(--blue);}
+.hero p.lead{max-width:560px;margin:0 auto 34px;font-size:17.5px;color:#3f5560;}
+.hero .actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.wing-divider{display:block;width:100%;height:56px;}
+
+/* generic sections */
+section{padding:70px 20px;}
+.section-head{max-width:640px;margin:0 auto 44px;text-align:center;}
+.section-head h2{font-size:32px;margin:10px 0 12px;font-weight:600;}
+.section-head p{color:#5a6b73;font-size:16px;margin:0;}
+
+/* services */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1180px;margin:0 auto;}
+.service-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 24px;text-align:left;transition:transform .15s ease, box-shadow .15s ease;}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(38,73,92,0.10);}
+.service-card .ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;}
+.ic-blue{background:var(--blue-light);}
+.ic-yellow{background:var(--yellow-soft);}
+.service-card h3{font-size:17px;margin:0 0 8px;font-weight:600;}
+.service-card p{font-size:14px;color:#5a6b73;margin:0;}
+
+/* why us band */
+.band{background:var(--navy-deep);color:#eaf3f7;}
+.band .section-head h2{color:#fff;}
+.band .section-head p{color:#b9cdd6;}
+.band .eyebrow{color:var(--yellow);}
+.perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1020px;margin:0 auto;}
+.perk-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:26px;text-align:center;}
+.perk-card .num{font-family:'Fraunces',serif;font-style:italic;font-size:26px;color:var(--yellow);margin-bottom:10px;}
+.perk-card h3{color:#fff;font-size:16.5px;margin:0 0 8px;font-weight:600;}
+.perk-card p{font-size:13.5px;color:#c3d5dd;margin:0;}
+
+/* cta strip */
+.cta-strip{background:linear-gradient(120deg, var(--blue) 0%, #6fc3e6 100%);padding:54px 20px;text-align:center;color:#fff;}
+.cta-strip h2{color:#fff;font-size:28px;margin-bottom:10px;}
+.cta-strip p{margin:0 0 26px;color:#eaf7ff;font-size:15.5px;}
+
+/* careers + referral sub-sections */
+.subhero{background:radial-gradient(circle at 12% 20%, rgba(63,160,216,0.22) 0, transparent 55%), radial-gradient(circle at 88% 25%, rgba(242,231,90,0.30) 0, transparent 55%), var(--blue-light);padding:56px 20px 48px;text-align:center;margin:-70px -20px 0;}
+.subhero h2{font-size:38px;margin:0 0 14px;font-weight:600;}
+.subhero p{max-width:600px;margin:0 auto;font-size:16.5px;color:#3f5560;}
+
+.job-perks{display:flex;gap:22px;justify-content:center;padding:46px 0 10px;max-width:1000px;margin:0 auto;flex-wrap:wrap;}
+.job-perk{flex:1;min-width:230px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center;}
+.job-perk .ic{font-size:26px;margin-bottom:10px;}
+.job-perk h3{margin:0 0 6px;font-size:16px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);}
+.job-perk p{font-size:13.5px;color:#5a6b73;margin:0;}
+
+.steps{display:flex;gap:24px;justify-content:center;padding:46px 0 10px;max-width:980px;margin:0 auto;flex-wrap:wrap;}
+.step{flex:1;min-width:210px;text-align:center;padding:10px 14px;}
+.step .num{width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin:0 auto 12px;font-size:15px;font-family:'Fraunces',serif;}
+.step h3{margin:0 0 8px;font-size:16px;font-family:'Inter',sans-serif;font-weight:700;color:var(--navy);}
+.step p{font-size:13.5px;color:#5a6b73;margin:0;}
+
+.form-wrap{max-width:740px;margin:34px auto 0;}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px;box-shadow:0 10px 28px rgba(38,73,92,0.07);}
+.form-card h3{margin-top:0;font-size:24px;}
+.form-card > p.sub{color:#5a6b73;font-size:14.5px;margin-top:6px;}
+.frame-wrap{width:100%;border-radius:8px;overflow:visible;border:1px solid var(--line);margin-top:16px;}
+.frame-wrap iframe{width:100%;border:0;display:block;}
+.form-note{font-size:12px;color:#8a8f9c;text-align:center;margin-top:10px;}
+.help-box{max-width:740px;margin:26px auto 0;padding:22px 28px;background:var(--navy-deep);color:#eaf3f7;border-radius:14px;text-align:center;font-size:14.5px;}
+.help-box a{color:var(--yellow);font-weight:700;text-decoration:none;}
+.privacy-note{max-width:740px;margin:16px auto 0;padding:0 20px;font-size:12.5px;color:#8a8f9c;text-align:center;}
+.alt-bg{background:#f8f5ec;}
+
+/* contact */
+.contact-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start;}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;}
+.contact-card h3{font-size:20px;margin-bottom:6px;}
+.contact-card p.sub{color:#5a6b73;font-size:14.5px;margin-top:0;margin-bottom:22px;}
+.contact-row{display:flex;gap:14px;margin-bottom:16px;font-size:14.5px;}
+.contact-row .lbl{font-weight:700;color:var(--navy);min-width:76px;}
+.contact-note{background:var(--yellow-soft);border:1px dashed #d8cf7a;border-radius:10px;padding:14px 16px;font-size:13px;color:#6b6423;margin-top:20px;}
+table.hours{font-size:14.5px;border-collapse:collapse;width:100%;}
+table.hours td{padding:6px 10px 6px 0;border-bottom:1px solid var(--line);}
+table.hours tr:last-child td{border-bottom:none;}
+
+/* footer */
+footer{background:var(--navy-deep);color:#c9d9df;padding:46px 44px 0;}
+.foot-inner{display:flex;gap:44px;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding-bottom:34px;}
+.foot-col{flex:1;min-width:220px;}
+.foot-col h3{color:#fff;font-size:16px;margin:0 0 16px;font-family:'Inter',sans-serif;font-weight:700;letter-spacing:.3px;}
+.foot-col img{height:40px;margin-bottom:14px;}
+.foot-col a{display:block;color:#c9d9df;text-decoration:none;font-size:14px;margin-bottom:9px;}
+.foot-col a:hover{color:var(--yellow);}
+.foot-bottom{border-top:1px solid rgba(255,255,255,0.12);padding:18px 0;text-align:center;font-size:12.5px;color:#93a9b1;max-width:1180px;margin:0 auto;}
+.foot-bottom a{color:#c9d9df;text-decoration:underline;}
+
+/* active nav link highlight via scroll spy */
+nav a.active{color:var(--navy-deep);border-bottom-color:var(--yellow);}
+
+@media(max-width:900px){
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .perks-grid{grid-template-columns:1fr;}
+  .contact-wrap{grid-template-columns:1fr;}
+}
+@media(max-width:560px){
+  .services-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:32px;}
+  .subhero h2{font-size:29px;}
+  header{padding:14px 20px;}
+  nav a{margin-left:14px;font-size:13.5px;}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="brand"><a href="#top"><img src="assets/logo-header.png" alt="EverBloom Therapy Center"></a></div>
+  <nav>
+    <a href="#top">Home</a>
+    <a href="#services">Services</a>
+    <a href="#refer">Refer a Client</a>
+    <a href="#careers">Careers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="header-cta">
+    <a class="phone-pill" href="tel:+10000000000">📞 (000) 000-0000</a>
+    <a class="btn btn-primary" href="#contact">Get Started</a>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="lockup" src="assets/logo-full.png" alt="EverBloom Therapy Center — Flourishing Together">
+  <h1>Every child grows at their <em>own</em> pace.<br>We help them bloom at it.</h1>
+  <p class="lead">EverBloom Therapy Center partners with families through personalized, in-home and in-clinic therapy — built around your child, not a one-size-fits-all plan.</p>
+  <div class="actions">
+    <a class="btn btn-sun" href="#refer">Refer a Client</a>
+    <a class="btn btn-outline" href="#careers">Join Our Team</a>
+  </div>
+</section>
+
+<svg class="wing-divider" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,20 C150,55 300,0 450,25 C600,50 750,5 900,28 C1000,44 1100,10 1200,22 L1200,60 L0,60 Z" fill="#fffdf6"></path>
+</svg>
+
+<section id="services">
+  <div class="section-head">
+    <div class="eyebrow">What We Offer</div>
+    <h2>Therapy built around your child</h2>
+    <p>Every plan starts with an assessment — never a template. Here's where most families begin.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="ic ic-blue">🗣️</div>
+      <h3>Speech Therapy</h3>
+      <p>Helping kids build the communication skills they need to connect, ask, and be understood.</p>
+    </div>
+    <div class="service-card">
+      <div class="ic ic-yellow">🧩</div>
+      <h3>Occupational Therapy</h3>
+      <p>Practical support for motor skills, sensory regulation, and everyday independence.</p>
+    </div>
+    <div class="service-card">
+      <div class="ic ic-blue">🌱</div>
+      <h3>Behavioral Therapy</h3>
+      <p>Individualized, evidence-based support that meets your child where they are.</p>
+    </div>
+    <div class="service-card">
+      <div class="ic ic-yellow">👪</div>
+      <h3>Family Coaching</h3>
+      <p>Tools and strategies so the progress made in session carries all the way home.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-head">
+    <div class="eyebrow">Why Families Choose Us</div>
+    <h2>Care that meets you where you are</h2>
+  </div>
+  <div class="perks-grid">
+    <div class="perk-card">
+      <div class="num">01</div>
+      <h3>Individualized plans</h3>
+      <p>No two children get the same plan — because no two children need the same thing.</p>
+    </div>
+    <div class="perk-card">
+      <div class="num">02</div>
+      <h3>Family-centered</h3>
+      <p>You're part of the care team, not a visitor to it. We build the plan together.</p>
+    </div>
+    <div class="perk-card">
+      <div class="num">03</div>
+      <h3>Experienced, caring team</h3>
+      <p>Every therapist brings real clinical training and genuine warmth to every visit.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Ready to take the first step?</h2>
+  <p>Refer a client or reach out directly — our team responds personally, usually within one business day.</p>
+  <a class="btn btn-primary" href="#refer" style="background:#fff;color:var(--navy-deep);">Start a Referral</a>
+</div>
+
+<!-- CAREERS -->
+<section id="careers">
+  <div class="subhero">
+    <h2>Join Our Team</h2>
+    <p>We're looking for caring, dependable therapists and support staff to help kids and families flourish. Tell us a bit about yourself and attach your resume — it only takes a couple of minutes.</p>
+  </div>
+  <div class="job-perks">
+    <div class="job-perk"><div class="ic">🤝</div><h3>Supportive team</h3><p>Ongoing training and clinical supervision — you're never figuring it out alone.</p></div>
+    <div class="job-perk"><div class="ic">📅</div><h3>Flexible scheduling</h3><p>In-home and in-clinic visits scheduled around your availability.</p></div>
+    <div class="job-perk"><div class="ic">🌱</div><h3>Meaningful work</h3><p>Real, visible growth in the kids and families you work with every week.</p></div>
+  </div>
+  <div class="form-wrap">
+    <div class="form-card">
+      <h3>Application</h3>
+      <p class="sub">Share your contact info, the role you're interested in, and a resume. We review every application personally.</p>
+      <div class="frame-wrap">
+        <iframe src="https://form.jotform.com/233114262716045" title="Job Application Form" id="JotFormIFrame-233114262716045" allow="geolocation; microphone; camera" style="min-width:100%;height:931px;" data-jf-embed-src="https://form.jotform.com/233114262716045?isIframeEmbed=1"></iframe>
+      </div>
+      <p class="form-note">This form is embedded from the original JotForm used in the concept template — point it to EverBloom's own JotForm account before publishing, so applications land in the right inbox.</p>
+    </div>
+  </div>
+  <div class="help-box">Questions about openings? Call <a href="tel:+10000000000">(000) 000-0000</a> — we're happy to chat before you apply.</div>
+</section>
+
+<!-- REFER A CLIENT -->
+<section id="refer" class="alt-bg">
+  <div class="subhero">
+    <h2>Refer a Client</h2>
+    <p>Know a family who could benefit from personalized child therapy? Share a few details below and our clinical team will follow up personally — no long applications, no guesswork.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h3>Share the basics</h3><p>Child's info and a way to reach the family.</p></div>
+    <div class="step"><div class="num">2</div><h3>We review</h3><p>Our clinical team looks it over within 1 business day.</p></div>
+    <div class="step"><div class="num">3</div><h3>We reach out</h3><p>A call to answer questions and schedule next steps.</p></div>
+  </div>
+  <div class="form-wrap">
+    <div class="form-card">
+      <h3>Referral Details</h3>
+      <p class="sub">Takes about 2 minutes. Fields marked required on the form must be completed before it can be sent.</p>
+      <div class="frame-wrap">
+        <iframe id="JotFormIFrame-232667084470056" allow="geolocation; microphone; camera" src="https://form.jotform.com/232667084470056" title="Client Referral Form" data-jf-embed-src="https://form.jotform.com/232667084470056?isIframeEmbed=1" style="height:3722px;"></iframe>
+      </div>
+      <p class="form-note">This form is embedded from the original JotForm used in the concept template — point it to EverBloom's own JotForm account before publishing, so referrals land in the right inbox.</p>
+    </div>
+  </div>
+  <div class="help-box">Prefer to talk it through first? Call <a href="tel:+10000000000">(000) 000-0000</a> and our team will walk you through it.</div>
+  <div class="privacy-note">Information you share is used only to evaluate this referral and is kept confidential.</div>
+</section>
+
+<section id="contact">
+  <div class="section-head">
+    <div class="eyebrow">Get In Touch</div>
+    <h2>We're happy to answer questions</h2>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-card">
+      <h3>Contact Us</h3>
+      <p class="sub">Prefer to talk it through first? Reach out any way that's easiest for you.</p>
+      <div class="contact-row"><span class="lbl">Phone</span><span><a href="tel:+10000000000">(000) 000-0000</a></span></div>
+      <div class="contact-row"><span class="lbl">Email</span><span><a href="mailto:hello@everbloomtherapy.com">hello@everbloomtherapy.com</a></span></div>
+      <div class="contact-row"><span class="lbl">Address</span><span>[Street Address], [City, State ZIP]</span></div>
+      <div class="contact-note">Placeholder contact details — swap in EverBloom's real phone number, email, and address before this goes live.</div>
+    </div>
+    <div class="contact-card">
+      <h3>Business Hours</h3>
+      <table class="hours">
+        <tr><td>Monday</td><td>9 AM – 6 PM</td></tr>
+        <tr><td>Tuesday</td><td>9 AM – 6 PM</td></tr>
+        <tr><td>Wednesday</td><td>9 AM – 6 PM</td></tr>
+        <tr><td>Thursday</td><td>9 AM – 6 PM</td></tr>
+        <tr><td>Friday</td><td>9 AM – 6 PM</td></tr>
+        <tr><td>Saturday</td><td>By Appointment Only</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-col">
+      <img src="assets/logo-header.png" alt="EverBloom Therapy Center">
+      <p style="font-size:13.5px;color:#9fb4bc;">Flourishing Together — personalized child therapy, in-home and in-clinic.</p>
+    </div>
+    <div class="foot-col">
+      <h3>Quick Links</h3>
+      <a href="#services">Services</a>
+      <a href="#refer">Refer a Client</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h3>Connect</h3>
+      <a href="tel:+10000000000">📞 (000) 000-0000</a>
+      <a href="mailto:hello@everbloomtherapy.com">✉️ hello@everbloomtherapy.com</a>
+      <a href="#">Facebook (add link)</a>
+      <a href="#">Instagram (add link)</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 EverBloom Therapy Center. All Rights Reserved | <a href="#">Terms of Conditions</a> | <a href="#">Privacy Policy</a></div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+</body>
+</html>
